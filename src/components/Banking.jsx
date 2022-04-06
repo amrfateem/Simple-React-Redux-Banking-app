@@ -3,7 +3,9 @@ import { useDispatch } from "react-redux";
 import { deposit, withdraw } from "../actions";
 
 const Banking = () => {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(() => {
+    return 0
+  });
   const dispatch = useDispatch();
   const handleChange = (e) => {
     setAmount(e.target.value);
